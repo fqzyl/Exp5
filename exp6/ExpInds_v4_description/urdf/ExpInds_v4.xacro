@@ -1,0 +1,906 @@
+<?xml version="1.0" ?>
+<robot name="ExpInds_v4" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find ExpInds_v4_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find ExpInds_v4_description)/urdf/ExpInds_v4.ros2control" />
+<xacro:include filename="$(find ExpInds_v4_description)/urdf/ExpInds_v4.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.010331720414375613 0.003793954447212839 0.3064381480885272" rpy="0 0 0"/>
+    <mass value="6.04960165037571"/>
+    <inertia ixx="0.121686" iyy="0.167889" izz="0.153808" ixy="0.0" iyz="0.0" ixz="0.01906"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Servo_v1__1__1">
+  <inertial>
+    <origin xyz="-0.007398971824638834 -0.012294050102634096 -0.16629507701325189" rpy="0 0 0"/>
+    <mass value="0.25233806594972435"/>
+    <inertia ixx="4.1e-05" iyy="6.8e-05" izz="4.3e-05" ixy="-0.0" iyz="-0.0" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.125155 0.095412 -0.342185" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Servo_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.125155 0.095412 -0.342185" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Servo_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Servo_v1__2__1">
+  <inertial>
+    <origin xyz="-0.007398971824637696 -0.01229405010263486 -0.16629507701325272" rpy="0 0 0"/>
+    <mass value="0.25233806594972435"/>
+    <inertia ixx="4.1e-05" iyy="6.8e-05" izz="4.3e-05" ixy="-0.0" iyz="-0.0" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.125155 -0.127588 -0.342185" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Servo_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.125155 -0.127588 -0.342185" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Servo_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Servo_v1__4__1">
+  <inertial>
+    <origin xyz="-0.006946437023661101 0.004705958997057336 -0.16629507701325189" rpy="0 0 0"/>
+    <mass value="0.25233806594972435"/>
+    <inertia ixx="4.1e-05" iyy="6.8e-05" izz="4.3e-05" ixy="-0.0" iyz="0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.153845 0.112412 -0.342185" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Servo_v1__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.153845 0.112412 -0.342185" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Servo_v1__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Servo_v1__3__1">
+  <inertial>
+    <origin xyz="-0.006946437023660407 -0.012294041002943762 -0.16629507701325272" rpy="0 0 0"/>
+    <mass value="0.25233806594972435"/>
+    <inertia ixx="4.1e-05" iyy="6.8e-05" izz="4.3e-05" ixy="-0.0" iyz="0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.153845 -0.127588 -0.342185" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Servo_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.153845 -0.127588 -0.342185" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Servo_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="DS51_Start_horn_v1_1">
+  <inertial>
+    <origin xyz="2.9557585096151584e-07 -4.5552898078615733e-08 0.0005602943907738744" rpy="0 0 0"/>
+    <mass value="0.027770568475082406"/>
+    <inertia ixx="3e-06" iyy="3e-06" izz="6e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.143078 -0.115294 -0.149643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/DS51_Start_horn_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.143078 -0.115294 -0.149643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/DS51_Start_horn_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="DS51_Start_horn_v1__2__1">
+  <inertial>
+    <origin xyz="2.955758496292482e-07 -4.5552896857370406e-08 0.0005602943907748181" rpy="0 0 0"/>
+    <mass value="0.027770568475082406"/>
+    <inertia ixx="3e-06" iyy="3e-06" izz="6e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.143078 0.107706 -0.149643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/DS51_Start_horn_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.143078 0.107706 -0.149643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/DS51_Start_horn_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="DS51_Start_horn_v1__4__1">
+  <inertial>
+    <origin xyz="2.95575849185159e-07 -4.5552898564338307e-08 0.0005602943907749014" rpy="0 0 0"/>
+    <mass value="0.027770568475082406"/>
+    <inertia ixx="3e-06" iyy="3e-06" izz="6e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.157422 0.107706 -0.149643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/DS51_Start_horn_v1__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.157422 0.107706 -0.149643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/DS51_Start_horn_v1__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="DS51_Start_horn_v1__1__1">
+  <inertial>
+    <origin xyz="2.9557585012884857e-07 -4.555289949415009e-08 0.0005602943907739022" rpy="0 0 0"/>
+    <mass value="0.027770568475082406"/>
+    <inertia ixx="3e-06" iyy="3e-06" izz="6e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.157422 -0.115294 -0.149643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/DS51_Start_horn_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.157422 -0.115294 -0.149643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/DS51_Start_horn_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="WheelsPaddoc_v2_1">
+  <inertial>
+    <origin xyz="8.231729798507947e-05 0.011538124454263984 -0.023461987819575383" rpy="0 0 0"/>
+    <mass value="1.2246"/>
+    <inertia ixx="0.001157" iyy="0.000846" izz="0.001046" ixy="-2e-06" iyz="0.000304" ixz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.143078 -0.115294 -0.146643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/WheelsPaddoc_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.143078 -0.115294 -0.146643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/WheelsPaddoc_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="WheelsPaddoc_v2__1__1">
+  <inertial>
+    <origin xyz="4.844848834129056e-05 0.011538315508105065 -0.02346198781957548" rpy="0 0 0"/>
+    <mass value="1.2246"/>
+    <inertia ixx="0.001157" iyy="0.000846" izz="0.001046" ixy="-1e-06" iyz="0.000304" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.157422 -0.115294 -0.146643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/WheelsPaddoc_v2__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.157422 -0.115294 -0.146643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/WheelsPaddoc_v2__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="WheelsPaddoc_v2__2__1">
+  <inertial>
+    <origin xyz="2.955758494349592e-07 -0.011538507091250594 -0.023461987819574537" rpy="0 0 0"/>
+    <mass value="1.2246"/>
+    <inertia ixx="0.001157" iyy="0.000846" izz="0.001046" ixy="0.0" iyz="-0.000304" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.157422 0.107706 -0.146643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/WheelsPaddoc_v2__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.157422 0.107706 -0.146643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/WheelsPaddoc_v2__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="WheelsPaddoc_v2__3__1">
+  <inertial>
+    <origin xyz="2.9557584899086997e-07 -0.011538507091248956 -0.023461987819574676" rpy="0 0 0"/>
+    <mass value="1.2246"/>
+    <inertia ixx="0.001157" iyy="0.000846" izz="0.001046" ixy="-0.0" iyz="-0.000304" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.143078 0.107706 -0.146643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/WheelsPaddoc_v2__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.143078 0.107706 -0.146643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/WheelsPaddoc_v2__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Servo_v1_1">
+  <inertial>
+    <origin xyz="-0.00022597182463782173 -4.1002940656068715e-08 0.019952178297179435" rpy="0 0 0"/>
+    <mass value="0.25233806594972435"/>
+    <inertia ixx="4.1e-05" iyy="6.8e-05" izz="4.3e-05" ixy="0.0" iyz="-0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.117828 -0.003794 -0.561493" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Servo_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.117828 -0.003794 -0.561493" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Servo_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="DS51_Start_horn_v1__3__1">
+  <inertial>
+    <origin xyz="2.9557585129458275e-07 -4.555267710693728e-08 -0.0005611931068472131" rpy="0 0 0"/>
+    <mass value="0.027770568475082406"/>
+    <inertia ixx="3e-06" iyy="3e-06" izz="6e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.128578 -0.003794 -0.607693" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/DS51_Start_horn_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.128578 -0.003794 -0.607693" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/DS51_Start_horn_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="DUDUKAN_PG_36_3MM_v1__2__1">
+  <inertial>
+    <origin xyz="0.14191183983322328 -0.13457725545307417 -0.1193992282316228" rpy="0 0 0"/>
+    <mass value="0.061802777435238064"/>
+    <inertia ixx="1.1e-05" iyy="2.3e-05" izz="2.1e-05" ixy="0.0" iyz="3e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.284764 -0.281599 -0.188285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/DUDUKAN_PG_36_3MM_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.284764 -0.281599 -0.188285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/DUDUKAN_PG_36_3MM_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="DUDUKAN_PG_36_3MM_v1__1__1">
+  <inertial>
+    <origin xyz="-0.15810329300176082 -0.13290673009106327 -0.11939922823162302" rpy="0 0 0"/>
+    <mass value="0.061802777435238064"/>
+    <inertia ixx="1.1e-05" iyy="2.3e-05" izz="2.1e-05" ixy="0.0" iyz="3e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.315658 -0.279929 -0.188285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/DUDUKAN_PG_36_3MM_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.315658 -0.279929 -0.188285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/DUDUKAN_PG_36_3MM_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="DUDUKAN_PG_36_3MM_v1__3__1">
+  <inertial>
+    <origin xyz="-0.14307770442434178 -0.14943463730886303 -0.11939922823162148" rpy="0 0 0"/>
+    <mass value="0.061802777435238064"/>
+    <inertia ixx="1.1e-05" iyy="2.3e-05" izz="2.1e-05" ixy="-0.0" iyz="-3e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.01 -0.188285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/DUDUKAN_PG_36_3MM_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.01 -0.188285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/DUDUKAN_PG_36_3MM_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="DUDUKAN_PG_36_3MM_v1_1">
+  <inertial>
+    <origin xyz="0.15742229557565907 -0.14943463730886433 -0.11939922823162123" rpy="0 0 0"/>
+    <mass value="0.061802777435238064"/>
+    <inertia ixx="1.1e-05" iyy="2.3e-05" izz="2.1e-05" ixy="-0.0" iyz="-3e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.01 -0.188285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/DUDUKAN_PG_36_3MM_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.01 -0.188285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/DUDUKAN_PG_36_3MM_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="PG36_v1_1">
+  <inertial>
+    <origin xyz="0.00024173129175325547 0.062370808141325965 -4.4935803265172547e-07" rpy="0 0 0"/>
+    <mass value="0.10249318991736163"/>
+    <inertia ixx="0.000109" iyy="1.8e-05" izz="0.000109" ixy="-1e-06" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.143078 0.147706 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/PG36_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.143078 0.147706 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/PG36_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="PG36_v1__3__1">
+  <inertial>
+    <origin xyz="0.00024173129175047992 0.06237080814132441 -4.493580396600083e-07" rpy="0 0 0"/>
+    <mass value="0.10249318991736163"/>
+    <inertia ixx="0.000109" iyy="1.8e-05" izz="0.000109" ixy="-1e-06" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.157422 0.147706 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/PG36_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.157422 0.147706 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/PG36_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="PG36_v1__1__1">
+  <inertial>
+    <origin xyz="-0.00020229912365390956 -0.06237105028135241 -4.493580404510422e-07" rpy="0 0 0"/>
+    <mass value="0.10249318991736163"/>
+    <inertia ixx="0.000109" iyy="1.8e-05" izz="0.000109" ixy="1e-06" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.142793 -0.155293 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/PG36_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.142793 -0.155293 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/PG36_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="PG36_v1__2__1">
+  <inertial>
+    <origin xyz="-1.8630029903793366e-05 -0.062371712012447456 -4.493580400138919e-07" rpy="0 0 0"/>
+    <mass value="0.10249318991736163"/>
+    <inertia ixx="0.000109" iyy="1.8e-05" izz="0.000109" ixy="1e-06" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.157589 -0.155294 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/PG36_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.157589 -0.155294 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/PG36_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Holder_Kinect_v1_1">
+  <inertial>
+    <origin xyz="0.0033450330142472673 -6.435873974291323e-08 0.015285093243177617" rpy="0 0 0"/>
+    <mass value="0.6914084942950353"/>
+    <inertia ixx="0.000686" iyy="0.0004" izz="0.000867" ixy="0.0" iyz="-0.0" ixz="-3.8e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.128578 -0.003794 -0.610693" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Holder_Kinect_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.128578 -0.003794 -0.610693" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Holder_Kinect_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Sense_Kinect_v1_1">
+  <inertial>
+    <origin xyz="-0.00225009672717294 4.5153725337429475e-05 0.04507363404309761" rpy="0 0 0"/>
+    <mass value="5.170546565587239"/>
+    <inertia ixx="0.024597" iyy="0.003275" izz="0.024429" ixy="-7e-06" iyz="-3e-06" ixz="2.8e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.129578 -0.003794 -0.623568" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Sense_Kinect_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.129578 -0.003794 -0.623568" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Sense_Kinect_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Coupling_12mm_v1_1">
+  <inertial>
+    <origin xyz="2.9557576503025373e-07 -0.0008311103458201741 -7.478261232694156e-05" rpy="0 0 0"/>
+    <mass value="0.04173013484271625"/>
+    <inertia ixx="3e-06" iyy="2e-06" izz="3e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.157422 0.167706 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Coupling_12mm_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.157422 0.167706 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Coupling_12mm_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Coupling_12mm_v1__1__1">
+  <inertial>
+    <origin xyz="2.9557576786132245e-07 -0.000831110345818814 -7.47826123199194e-05" rpy="0 0 0"/>
+    <mass value="0.04173013484271625"/>
+    <inertia ixx="3e-06" iyy="2e-06" izz="3e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.143078 0.167706 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Coupling_12mm_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.143078 0.167706 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Coupling_12mm_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Coupling_12mm_v1__3__1">
+  <inertial>
+    <origin xyz="3.1589638795348485e-06 0.0008314895199351413 7.388389624724684e-05" rpy="0 0 0"/>
+    <mass value="0.04173013484271625"/>
+    <inertia ixx="3e-06" iyy="2e-06" izz="3e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.157673 -0.175293 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Coupling_12mm_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.157673 -0.175293 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Coupling_12mm_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Coupling_12mm_v1__2__1">
+  <inertial>
+    <origin xyz="5.716195879412744e-06 0.0008314822791871956 7.388389624682357e-05" rpy="0 0 0"/>
+    <mass value="0.04173013484271625"/>
+    <inertia ixx="3e-06" iyy="2e-06" izz="3e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.142651 -0.175292 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Coupling_12mm_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.142651 -0.175292 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Coupling_12mm_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Rubb_Wheel_v1_1">
+  <inertial>
+    <origin xyz="2.955758440781331e-07 -0.0026020671246425875 -4.493580426367938e-07" rpy="0 0 0"/>
+    <mass value="2.1590032107593466"/>
+    <inertia ixx="0.002052" iyy="0.003885" izz="0.002052" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.157422 0.177706 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Rubb_Wheel_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.157422 0.177706 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Rubb_Wheel_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Rubb_Wheel_v1__2__1">
+  <inertial>
+    <origin xyz="2.9557584696471295e-07 -0.0026020671246412275 -4.4935803563544985e-07" rpy="0 0 0"/>
+    <mass value="2.1590032107593466"/>
+    <inertia ixx="0.002052" iyy="0.003885" izz="0.002052" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.143078 0.177706 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Rubb_Wheel_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.143078 0.177706 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Rubb_Wheel_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Rubb_Wheel_v1__1__1">
+  <inertial>
+    <origin xyz="1.1282137773155343e-05 0.0026023437966092022 -4.493580370509842e-07" rpy="0 0 0"/>
+    <mass value="2.1590032107593466"/>
+    <inertia ixx="0.002052" iyy="0.003885" izz="0.002052" ixy="8e-06" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.157714 -0.185293 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Rubb_Wheel_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.157714 -0.185293 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Rubb_Wheel_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Rubb_Wheel_v1__3__1">
+  <inertial>
+    <origin xyz="1.8390621958741526e-05 0.0026021416523627494 -4.4935803747425673e-07" rpy="0 0 0"/>
+    <mass value="2.1590032107593466"/>
+    <inertia ixx="0.002052" iyy="0.003885" izz="0.002052" ixy="1.3e-05" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.14258 -0.185292 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Rubb_Wheel_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.14258 -0.185292 -0.053643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ExpInds_v4_description)/meshes/Rubb_Wheel_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid 1" type="fixed">
+  <origin xyz="-0.125155 -0.095412 0.342185" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Servo_v1__1__1"/>
+</joint>
+
+<joint name="Rigid 2" type="fixed">
+  <origin xyz="-0.125155 0.127588 0.342185" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Servo_v1__2__1"/>
+</joint>
+
+<joint name="Rigid 3" type="fixed">
+  <origin xyz="0.153845 -0.112412 0.342185" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Servo_v1__4__1"/>
+</joint>
+
+<joint name="Rigid 4" type="fixed">
+  <origin xyz="0.153845 0.127588 0.342185" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Servo_v1__3__1"/>
+</joint>
+
+<joint name="Rigid 6" type="fixed">
+  <origin xyz="-0.017923 -0.012294 -0.192542" rpy="0 0 0"/>
+  <parent link="Servo_v1__2__1"/>
+  <child link="DS51_Start_horn_v1_1"/>
+</joint>
+
+<joint name="Rigid 7" type="fixed">
+  <origin xyz="-0.017923 -0.012294 -0.192542" rpy="0 0 0"/>
+  <parent link="Servo_v1__1__1"/>
+  <child link="DS51_Start_horn_v1__2__1"/>
+</joint>
+
+<joint name="Rigid 8" type="fixed">
+  <origin xyz="0.003577 0.004706 -0.192542" rpy="0 0 0"/>
+  <parent link="Servo_v1__4__1"/>
+  <child link="DS51_Start_horn_v1__4__1"/>
+</joint>
+
+<joint name="Rigid 9" type="fixed">
+  <origin xyz="0.003577 -0.012294 -0.192542" rpy="0 0 0"/>
+  <parent link="Servo_v1__3__1"/>
+  <child link="DS51_Start_horn_v1__1__1"/>
+</joint>
+
+<joint name="Rear_Left_S" type="revolute">
+  <origin xyz="0.0 0.0 -0.003" rpy="0 0 0"/>
+  <parent link="DS51_Start_horn_v1_1"/>
+  <child link="WheelsPaddoc_v2_1"/>
+  <axis xyz="-0.0 -0.0 -1.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Front_Left_S" type="revolute">
+  <origin xyz="0.0 0.0 -0.003" rpy="0 0 0"/>
+  <parent link="DS51_Start_horn_v1__1__1"/>
+  <child link="WheelsPaddoc_v2__1__1"/>
+  <axis xyz="-0.0 -0.0 -1.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Front_Right_S" type="revolute">
+  <origin xyz="0.0 0.0 -0.003" rpy="0 0 0"/>
+  <parent link="DS51_Start_horn_v1__4__1"/>
+  <child link="WheelsPaddoc_v2__2__1"/>
+  <axis xyz="-0.0 -0.0 -1.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rear_Right_S" type="revolute">
+  <origin xyz="0.0 0.0 -0.003" rpy="0 0 0"/>
+  <parent link="DS51_Start_horn_v1__2__1"/>
+  <child link="WheelsPaddoc_v2__3__1"/>
+  <axis xyz="-0.0 -0.0 -1.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 14" type="fixed">
+  <origin xyz="-0.117828 0.003794 0.561493" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Servo_v1_1"/>
+</joint>
+
+<joint name="Rigid 15" type="fixed">
+  <origin xyz="-0.01075 0.0 0.0462" rpy="0 0 0"/>
+  <parent link="Servo_v1_1"/>
+  <child link="DS51_Start_horn_v1__3__1"/>
+</joint>
+
+<joint name="Rigid 16" type="fixed">
+  <origin xyz="-0.141686 0.166305 0.041642" rpy="0 0 0"/>
+  <parent link="WheelsPaddoc_v2_1"/>
+  <child link="DUDUKAN_PG_36_3MM_v1__2__1"/>
+</joint>
+
+<joint name="Rigid 17" type="fixed">
+  <origin xyz="0.158236 0.164635 0.041642" rpy="0 0 0"/>
+  <parent link="WheelsPaddoc_v2__1__1"/>
+  <child link="DUDUKAN_PG_36_3MM_v1__1__1"/>
+</joint>
+
+<joint name="Rigid 18" type="fixed">
+  <origin xyz="0.143078 0.117706 0.041642" rpy="0 0 0"/>
+  <parent link="WheelsPaddoc_v2__3__1"/>
+  <child link="DUDUKAN_PG_36_3MM_v1__3__1"/>
+</joint>
+
+<joint name="Rigid 19" type="fixed">
+  <origin xyz="-0.157422 0.117706 0.041642" rpy="0 0 0"/>
+  <parent link="WheelsPaddoc_v2__2__1"/>
+  <child link="DUDUKAN_PG_36_3MM_v1_1"/>
+</joint>
+
+<joint name="Rigid 20" type="fixed">
+  <origin xyz="-0.143078 -0.157706 -0.134642" rpy="0 0 0"/>
+  <parent link="DUDUKAN_PG_36_3MM_v1__3__1"/>
+  <child link="PG36_v1_1"/>
+</joint>
+
+<joint name="Rigid 21" type="fixed">
+  <origin xyz="0.157422 -0.157706 -0.134642" rpy="0 0 0"/>
+  <parent link="DUDUKAN_PG_36_3MM_v1_1"/>
+  <child link="PG36_v1__3__1"/>
+</joint>
+
+<joint name="Rigid 22" type="fixed">
+  <origin xyz="0.141971 -0.126306 -0.134642" rpy="0 0 0"/>
+  <parent link="DUDUKAN_PG_36_3MM_v1__2__1"/>
+  <child link="PG36_v1__1__1"/>
+</joint>
+
+<joint name="Rigid 23" type="fixed">
+  <origin xyz="-0.158069 -0.124635 -0.134642" rpy="0 0 0"/>
+  <parent link="DUDUKAN_PG_36_3MM_v1__1__1"/>
+  <child link="PG36_v1__2__1"/>
+</joint>
+
+<joint name="Rigid 32" type="fixed">
+  <origin xyz="0.0 0.0 0.003" rpy="0 0 0"/>
+  <parent link="DS51_Start_horn_v1__3__1"/>
+  <child link="Holder_Kinect_v1_1"/>
+</joint>
+
+<joint name="Kinect_Rev" type="revolute">
+  <origin xyz="-0.001 0.0 0.012875" rpy="0 0 0"/>
+  <parent link="Holder_Kinect_v1_1"/>
+  <child link="Sense_Kinect_v1_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Front_Right_D" type="continuous">
+  <origin xyz="0.0 -0.02 0.0" rpy="0 0 0"/>
+  <parent link="PG36_v1__3__1"/>
+  <child link="Coupling_12mm_v1_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Rear_Right_D" type="continuous">
+  <origin xyz="0.0 -0.02 0.0" rpy="0 0 0"/>
+  <parent link="PG36_v1_1"/>
+  <child link="Coupling_12mm_v1__1__1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Front_Left_D" type="continuous">
+  <origin xyz="8.4e-05 0.019999 0.0" rpy="0 0 0"/>
+  <parent link="PG36_v1__2__1"/>
+  <child link="Coupling_12mm_v1__3__1"/>
+  <axis xyz="0.004173 0.999991 -0.0"/>
+</joint>
+
+<joint name="Rear_Left_D" type="continuous">
+  <origin xyz="0.000142 0.019999 0.0" rpy="0 0 0"/>
+  <parent link="PG36_v1__1__1"/>
+  <child link="Coupling_12mm_v1__2__1"/>
+  <axis xyz="0.007109 0.999975 -0.0"/>
+</joint>
+
+<joint name="Rigid 59" type="fixed">
+  <origin xyz="0.0 -0.01 0.0" rpy="0 0 0"/>
+  <parent link="Coupling_12mm_v1_1"/>
+  <child link="Rubb_Wheel_v1_1"/>
+</joint>
+
+<joint name="Rigid 60" type="fixed">
+  <origin xyz="0.0 -0.01 0.0" rpy="0 0 0"/>
+  <parent link="Coupling_12mm_v1__1__1"/>
+  <child link="Rubb_Wheel_v1__2__1"/>
+</joint>
+
+<joint name="Rigid 61" type="fixed">
+  <origin xyz="4.1e-05 0.01 0.0" rpy="0 0 0"/>
+  <parent link="Coupling_12mm_v1__3__1"/>
+  <child link="Rubb_Wheel_v1__1__1"/>
+</joint>
+
+<joint name="Rigid 62" type="fixed">
+  <origin xyz="7.1e-05 0.01 0.0" rpy="0 0 0"/>
+  <parent link="Coupling_12mm_v1__2__1"/>
+  <child link="Rubb_Wheel_v1__3__1"/>
+</joint>
+
+</robot>
